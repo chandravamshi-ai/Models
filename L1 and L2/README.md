@@ -90,3 +90,93 @@ print(f"Lasso Regression RMSE: {lasso_rmse}, R²: {lasso_r2}")
 
 Regularization helps prevent overfitting by adding a penalty for larger coefficients in the model. This constraint encourages simpler models that generalize better to unseen data. Ridge and Lasso are common regularization techniques, with Ridge shrinking coefficients and Lasso potentially setting some coefficients to zero, effectively performing feature selection. Regularization is crucial in building robust models, especially when dealing with multicollinearity or when the dataset has a large number of features.
 
+
+
+### Regularization Parameter: Alpha (\(\alpha\))
+
+The parameter \(\alpha\) in Ridge and Lasso regression is the regularization strength. It controls the trade-off between fitting the training data perfectly and keeping the model coefficients small to prevent overfitting.
+
+### Understanding Alpha (\(\alpha\)):
+
+1. **Small \(\alpha\)**:
+   - When \(\alpha\) is close to zero, the regularization term has little effect, and the model is similar to ordinary least squares (OLS) regression.
+   - The model focuses more on minimizing the residual sum of squares, potentially leading to overfitting.
+
+2. **Large \(\alpha\)**:
+   - As \(\alpha\) increases, the influence of the regularization term becomes stronger.
+   - The model will shrink the coefficients more, leading to smaller coefficients and potentially underfitting.
+
+### Effect of Alpha:
+
+- **Ridge Regression**: \(\alpha\) controls the L2 penalty term, which is the sum of the squares of the coefficients.
+- **Lasso Regression**: \(\alpha\) controls the L1 penalty term, which is the sum of the absolute values of the coefficients.
+
+### Objective Functions:
+
+- **Ridge Regression**:
+  \[
+  \text{Minimize } \left\{ \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 + \alpha \sum_{j=1}^{p} \beta_j^2 \right\}
+  \]
+
+- **Lasso Regression**:
+  \[
+  \text{Minimize } \left\{ \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 + \alpha \sum_{j=1}^{p} |\beta_j| \right\}
+  \]
+
+### Choosing Alpha (\(\alpha\)):
+
+Choosing the right \(\alpha\) is crucial for achieving a good balance between bias and variance. Typically, \(\alpha\) is selected using a hyperparameter tuning method like cross-validation.
+
+### Cross-Validation for Hyperparameter Tuning:
+
+1. **Grid Search**: Explore a range of \(\alpha\) values and select the one that minimizes the cross-validation error.
+
+2. **Example Code**:
+
+```python
+from sklearn.linear_model import Ridge, Lasso
+from sklearn.model_selection import GridSearchCV
+
+# Define the range of alpha values for Ridge
+ridge_alphas = {'alpha': [0.1, 1.0, 10.0, 100.0, 1000.0]}
+ridge = Ridge()
+
+# Perform grid search with cross-validation for Ridge
+ridge_grid = GridSearchCV(ridge, ridge_alphas, cv=5, scoring='neg_mean_squared_error')
+ridge_grid.fit(X_train, y_train)
+
+# Best alpha for Ridge
+best_ridge_alpha = ridge_grid.best_params_['alpha']
+print(f"Best alpha for Ridge Regression: {best_ridge_alpha}")
+
+# Define the range of alpha values for Lasso
+lasso_alphas = {'alpha': [0.001, 0.01, 0.1, 1.0, 10.0]}
+lasso = Lasso()
+
+# Perform grid search with cross-validation for Lasso
+lasso_grid = GridSearchCV(lasso, lasso_alphas, cv=5, scoring='neg_mean_squared_error')
+lasso_grid.fit(X_train, y_train)
+
+# Best alpha for Lasso
+best_lasso_alpha = lasso_grid.best_params_['alpha']
+print(f"Best alpha for Lasso Regression: {best_lasso_alpha}")
+```
+
+### Explanation of the Code:
+
+1. **Ridge Regression**:
+   - `ridge_alphas`: A dictionary containing a range of \(\alpha\) values to be tested.
+   - `GridSearchCV`: A method to perform an exhaustive search over specified parameter values for an estimator. Here, it is used to find the best \(\alpha\) value for Ridge Regression using cross-validation.
+
+2. **Lasso Regression**:
+   - `lasso_alphas`: A dictionary containing a range of \(\alpha\) values to be tested.
+   - `GridSearchCV`: Similarly used to find the best \(\alpha\) value for Lasso Regression using cross-validation.
+
+### Summary:
+
+- **Alpha (\(\alpha\))**: Controls the strength of the regularization.
+- **Small \(\alpha\)**: Little regularization, similar to OLS.
+- **Large \(\alpha\)**: Strong regularization, can lead to underfitting.
+- **Choosing \(\alpha\)**: Use cross-validation techniques like GridSearchCV to find the optimal \(\alpha\).
+
+Regularization helps in building more robust models by preventing overfitting, especially in the presence of multicollinearity or when the number of predictors is large compared to the number of observations.
