@@ -1,6 +1,3 @@
-Sure, here's the entire text with the mathematical formulas in the format suitable for a GitHub README file:
-
----
 
 # Regularization in Machine Learning and Statistical Modeling
 
