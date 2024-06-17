@@ -20,12 +20,12 @@ There are several types of regression, each suited for different kinds of proble
 Simple linear regression is used to predict a dependent variable using a single independent variable.
 
 **Equation**:
-\[ y = \beta_0 + \beta_1 x \]
+$$\ y = \beta_0 + \beta_1 x \$$
 
-- \( y \): Dependent variable
-- \( x \): Independent variable
-- \( \beta_0 \): Intercept
-- \( \beta_1 \): Slope
+- $\( y \)$: Dependent variable
+- $\( x \)$: Independent variable
+- $\( \beta_0 \)$: Intercept
+- $\( \beta_1 \)$: Slope
 
 **Example**: Predicting house prices based on size.
 
@@ -84,11 +84,11 @@ Simple linear regression is used to predict a dependent variable using a single 
 Multiple linear regression uses two or more independent variables to predict a dependent variable.
 
 **Equation**:
-\[ y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n \]
+$$\ y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_n x_n \$$
 
-- \( y \): Dependent variable
-- \( x_1, x_2, ..., x_n \): Independent variables
-- \( \beta_0, \beta_1, \beta_2, ..., \beta_n \): Coefficients
+- $\( y \)$: Dependent variable
+- $\( x_1, x_2, ..., x_n \)$: Independent variables
+- $\( \beta_0, \beta_1, \beta_2, ..., \beta_n \)$: Coefficients
 
 **Example**: Predicting house prices based on size and location.
 
@@ -136,24 +136,24 @@ For linear regression to give reliable results, certain assumptions need to be m
 4. **Normality**: The residuals should be normally distributed.
 
 #### 2. Coefficients and Intercept
-- **Intercept (\(\beta_0\))**: The value of \( y \) when all \( x \) values are zero.
-- **Slope (\(\beta_1, \beta_2, ...\))**: The change in \( y \) for a one-unit change in \( x \).
+- **Intercept $\(\beta_0\)$**: The value of $\( y \)$ when all $\( x \)$ values are zero.
+- **Slope $\(\beta_1, \beta_2, ...\)$**: The change in $\( y \)$ for a one-unit change in $\( x \)$.
 
-#### 3. R-squared (\(R^2\))
+#### 3. R-squared $\(R^2\)$
 R-squared is a statistical measure that represents the proportion of the variance for the dependent variable that's explained by the independent variables.
 
 **Equation**:
-\[ R^2 = 1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2} \]
+$$\ R^2 = 1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2} \$$
 
-- \( y_i \): Actual value
-- \( \hat{y}_i \): Predicted value
-- \( \bar{y} \): Mean of actual values
+- $\( y_i \)$: Actual value
+- $\( \hat{y}_i \)$: Predicted value
+- $\( \bar{y} \)$: Mean of actual values
 
 #### 4. Mean Squared Error (MSE)
 MSE measures the average of the squares of the errors—that is, the average squared difference between the estimated values and the actual value.
 
 **Equation**:
-\[ MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 \]
+$$\ MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 \$$
 
 ### Part 4: Advanced Regression Techniques
 
@@ -161,7 +161,7 @@ MSE measures the average of the squares of the errors—that is, the average squ
 Polynomial regression fits a polynomial equation to the data.
 
 **Equation**:
-\[ y = \beta_0 + \beta_1 x + \beta_2 x^2 + ... + \beta_n x^n \]
+$$\ y = \beta_0 + \beta_1 x + \beta_2 x^2 + ... + \beta_n x^n \$$
 
 **Example**: Predicting house prices with a quadratic relationship.
 
@@ -200,10 +200,10 @@ Polynomial regression fits a polynomial equation to the data.
 Regularization techniques add a penalty to the model's complexity to prevent overfitting.
 
 **Ridge Regression** adds an L2 penalty:
-\[ \text{Cost} = \sum (y_i - \hat{y}_i)^2 + \lambda \sum \beta_j^2 \]
+$$\ \text{Cost} = \sum (y_i - \hat{y}_i)^2 + \lambda \sum \beta_j^2 \$$
 
 **Lasso Regression** adds an L1 penalty:
-\[ \text{Cost} = \sum (y_i - \hat{y}_i)^2 + \lambda \sum |\beta_j| \]
+$$\ \text{Cost} = \sum (y_i - \hat{y}_i)^2 + \lambda \sum |\beta_j| \$$
 
 **Example: Ridge Regression**
 
