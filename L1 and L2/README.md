@@ -19,11 +19,11 @@ Regularization works by adding a penalty term to the loss function that the mode
 L2 regularization adds a penalty equal to the sum of the squared coefficients to the loss function. The penalty term is controlled by a hyperparameter, often denoted as λ or α.
 
 **Objective Function:**
-Minimize { Σ (yi - ŷi)^2 + λ Σ (βj^2) }
+Minimize $\ Σ (yi - ŷi)^2 + λ Σ (βj^2) \$
 
 Here:
-- Σ (yi - ŷi)^2 is the residual sum of squares (RSS), which measures the fit of the model.
-- λ Σ (βj^2) is the regularization term that penalizes large coefficients.
+- $\Σ (yi - ŷi)^2\$ is the residual sum of squares (RSS), which measures the fit of the model.
+- $\λ Σ (βj^2)\$ is the regularization term that penalizes large coefficients.
 
 **Effect:**
 - Reduces the magnitude of coefficients.
@@ -34,11 +34,11 @@ Here:
 L1 regularization adds a penalty equal to the sum of the absolute values of the coefficients to the loss function. Like Ridge, the penalty term is controlled by λ.
 
 **Objective Function:**
-Minimize { Σ (yi - ŷi)^2 + λ Σ |βj| }
+Minimize $\ Σ (yi - ŷi)^2 + λ Σ |βj| \$
 
 Here:
-- Σ (yi - ŷi)^2 is the RSS.
-- λ Σ |βj| is the regularization term that penalizes large absolute values of the coefficients.
+- $\ Σ (yi - ŷi)^2\$ is the RSS.
+- $\ λ Σ |βj|\$ is the regularization term that penalizes large absolute values of the coefficients.
 
 **Effect:**
 - Can shrink some coefficients to exactly zero, effectively performing feature selection.
@@ -112,10 +112,10 @@ The parameter α in Ridge and Lasso regression is the regularization strength. I
 ### Objective Functions:
 
 - **Ridge Regression**:
-  Minimize { Σ (yi - ŷi)^2 + α Σ (βj^2) }
+  Minimize $\ Σ (yi - ŷi)^2 + α Σ (βj^2) \$
 
 - **Lasso Regression**:
-  Minimize { Σ (yi - ŷi)^2 + α Σ |βj| }
+  Minimize $\ Σ (yi - ŷi)^2 + α Σ |βj| \$
 
 ### Choosing Alpha (α):
 
