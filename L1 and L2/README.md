@@ -22,8 +22,8 @@ L2 regularization adds a penalty equal to the sum of the squared coefficients to
 Minimize $\ Σ (yi - ŷi)^2 + λ Σ (βj^2) \$
 
 Here:
-- $\Σ (yi - ŷi)^2\$ is the residual sum of squares (RSS), which measures the fit of the model.
-- $\λ Σ (βj^2)\$ is the regularization term that penalizes large coefficients.
+- $\ Σ (yi - ŷi)^2\$ is the residual sum of squares (RSS), which measures the fit of the model.
+- $\ λ Σ (βj^2)\$ is the regularization term that penalizes large coefficients.
 
 **Effect:**
 - Reduces the magnitude of coefficients.
