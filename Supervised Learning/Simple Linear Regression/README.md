@@ -11,12 +11,12 @@ Linear regression is a statistical method used to model the relationship between
    - **Independent Variable (X)**: The variable(s) used to predict the dependent variable. In the example above, height is the independent variable.
 
 2. **Equation of a Line**:
-   - In its simplest form, linear regression can be represented by the equation of a line: \( Y = \beta_0 + \beta_1 X + \epsilon \)
-     - \( Y \) is the dependent variable.
-     - \( \beta_0 \) is the y-intercept (the value of Y when X is 0).
-     - \( \beta_1 \) is the slope (the change in Y for a one-unit change in X).
-     - \( X \) is the independent variable.
-     - \( \epsilon \) is the error term (the difference between the observed and predicted values of Y).
+   - In its simplest form, linear regression can be represented by the equation of a line: $\( Y = \beta_0 + \beta_1 X + \epsilon \)$
+     - $\( Y \)$ is the dependent variable.
+     - $\( \beta_0 \)$ is the y-intercept (the value of Y when X is 0).
+     - $\( \beta_1 \)$ is the slope (the change in Y for a one-unit change in X).
+     - $\( X \)$ is the independent variable.
+     - $\( \epsilon \)$ is the error term (the difference between the observed and predicted values of Y).
 
 ### Steps in Linear Regression
 
@@ -24,7 +24,7 @@ Linear regression is a statistical method used to model the relationship between
 
 2. **Visualize Data**: Plot the data to understand the relationship between variables. For example, a scatter plot can show if there is a linear relationship.
 
-3. **Fit the Model**: Use statistical software or methods to find the best-fitting line. This involves finding the values of \( \beta_0 \) and \( \beta_1 \) that minimize the error term \( \epsilon \).
+3. **Fit the Model**: Use statistical software or methods to find the best-fitting line. This involves finding the values of $\( \beta_0 \)$ and $\( \beta_1 \)$ that minimize the error term $\( \epsilon \)$.
 
 4. **Evaluate the Model**: Assess how well the model fits the data using various metrics like R-squared, Mean Squared Error (MSE), etc.
 
@@ -46,11 +46,11 @@ For linear regression to produce reliable results, several assumptions must be m
 
 ### Advanced Concepts
 
-1. **Multiple Linear Regression**: Extends simple linear regression to include multiple independent variables. The equation becomes: \( Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + ... + \beta_n X_n + \epsilon \)
+1. **Multiple Linear Regression**: Extends simple linear regression to include multiple independent variables. The equation becomes: $\( Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + ... + \beta_n X_n + \epsilon \)$
 
 2. **Regularization**: Techniques like Ridge Regression and Lasso Regression are used to prevent overfitting by adding a penalty term to the regression equation.
 
-3. **Polynomial Regression**: If the relationship between variables is not linear, we can use polynomial regression to model it. The equation includes higher-order terms of the independent variables: \( Y = \beta_0 + \beta_1 X + \beta_2 X^2 + ... + \beta_n X^n + \epsilon \)
+3. **Polynomial Regression**: If the relationship between variables is not linear, we can use polynomial regression to model it. The equation includes higher-order terms of the independent variables: $\( Y = \beta_0 + \beta_1 X + \beta_2 X^2 + ... + \beta_n X^n + \epsilon \)$
 
 4. **Interaction Terms**: In multiple linear regression, interaction terms can be added to model the effect of two variables interacting with each other.
 
@@ -71,23 +71,23 @@ Let's go through a simple example of linear regression:
    - Plot the data points on a scatter plot.
 
 2. **Fit the Model**:
-   - Use the least squares method to find the best-fitting line. This involves solving for \( \beta_0 \) and \( \beta_1 \) using the following formulas:
-     - \( \beta_1 = \frac{\sum (X_i - \bar{X})(Y_i - \bar{Y})}{\sum (X_i - \bar{X})^2} \)
-     - \( \beta_0 = \bar{Y} - \beta_1 \bar{X} \)
+   - Use the least squares method to find the best-fitting line. This involves solving for $\( \beta_0 \) and \( \beta_1 \)$ using the following formulas:
+     - $\( \beta_1 = \frac{\sum (X_i - \bar{X})(Y_i - \bar{Y})}{\sum (X_i - \bar{X})^2} \)$
+     - $\( \beta_0 = \bar{Y} - \beta_1 \bar{X} \)$
    - For our example:
-     - Mean of X (\(\bar{X}\)) = 3
-     - Mean of Y (\(\bar{Y}\)) = 4
-     - Calculate \( \beta_1 \) and \( \beta_0 \):
-       - \( \beta_1 = \frac{(1-3)(2-4) + (2-3)(4-4) + (3-3)(5-4) + (4-3)(4-4) + (5-3)(5-4)}{(1-3)^2 + (2-3)^2 + (3-3)^2 + (4-3)^2 + (5-3)^2} = \frac{10}{10} = 1 \)
-       - \( \beta_0 = 4 - 1 \cdot 3 = 1 \)
-   - The fitted line equation is: \( Y = 1 + 1X \)
+     - Mean of X $(\(\bar{X}\))$ = 3
+     - Mean of Y $(\(\bar{Y}\))$ = 4
+     - Calculate $\( \beta_1 \)$ and $\( \beta_0 \)$:
+       - $\( \beta_1 = \frac{(1-3)(2-4) + (2-3)(4-4) + (3-3)(5-4) + (4-3)(4-4) + (5-3)(5-4)}{(1-3)^2 + (2-3)^2 + (3-3)^2 + (4-3)^2 + (5-3)^2} = \frac{10}{10} = 1 \)$
+       - $\( \beta_0 = 4 - 1 \cdot 3 = 1 \)$
+   - The fitted line equation is: $\( Y = 1 + 1X \)$
 
 3. **Evaluate the Model**:
    - Calculate R-squared to evaluate the fit. R-squared = 0.6, meaning 60% of the variation in exam scores can be explained by hours studied.
 
 4. **Make Predictions**:
    - Use the model to predict the exam score for a student who studies for 6 hours:
-     - \( Y = 1 + 1 \cdot 6 = 7 \)
+     - $\( Y = 1 + 1 \cdot 6 = 7 \)$
 
 ### Summary
 
