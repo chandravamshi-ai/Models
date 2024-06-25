@@ -9,11 +9,11 @@ R-squared is a statistical measure that explains the proportion of the variance 
 
 The formula for R-squared is:
 
-\[ R^2 = 1 - \frac{SS_{res}}{SS_{tot}} \]
+$$\ R^2 = 1 - \frac{SS_{res}}{SS_{tot}} \$$
 
 Where:
-- \( SS_{res} \) is the sum of squares of residuals (errors).
-- \( SS_{tot} \) is the total sum of squares (variance of the dependent variable).
+- $\( SS_{res} \)$ is the sum of squares of residuals (errors).
+- $\( SS_{tot} \)$ is the total sum of squares (variance of the dependent variable).
 
 **Example**:
 If your R-squared value is 0.85, it means that 85% of the variance in the dependent variable is explained by the independent variables.
@@ -22,11 +22,11 @@ If your R-squared value is 0.85, it means that 85% of the variance in the depend
 
 Adjusted R-squared adjusts the R-squared value based on the number of predictors in the model. It is useful when comparing models with different numbers of independent variables, as it accounts for the degrees of freedom:
 
-\[ \text{Adjusted } R^2 = 1 - \left( \frac{SS_{res}/(n - k - 1)}{SS_{tot}/(n - 1)} \right) \]
+$$\ \text{Adjusted } R^2 = 1 - \left( \frac{SS_{res}/(n - k - 1)}{SS_{tot}/(n - 1)} \right) \$$
 
 Where:
-- \( n \) is the number of observations.
-- \( k \) is the number of independent variables.
+- $\( n \)$ is the number of observations.
+- $\( k \)$ is the number of independent variables.
 
 **Example**:
 In models with multiple predictors, if the Adjusted R-squared is higher than the R-squared, it indicates that adding the additional predictors is useful.
@@ -35,12 +35,12 @@ In models with multiple predictors, if the Adjusted R-squared is higher than the
 
 MSE measures the average of the squares of the errors (the difference between the observed and predicted values). It gives you an idea of how far off the model’s predictions are from the actual data:
 
-\[ \text{MSE} = \frac{1}{n} \sum_{i=1}^n (Y_i - \hat{Y_i})^2 \]
+$\ \text{MSE} = \frac{1}{n} \sum_{i=1}^n (Y_i - \hat{Y_i})^2 \$
 
 Where:
-- \( Y_i \) is the observed value.
-- \( \hat{Y_i} \) is the predicted value.
-- \( n \) is the number of observations.
+- $\( Y_i \)$ is the observed value.
+- $\( \hat{Y_i} \)$ is the predicted value.
+- $\( n \)$ is the number of observations.
 
 **Example**:
 A lower MSE indicates a better fit of the model.
@@ -49,7 +49,7 @@ A lower MSE indicates a better fit of the model.
 
 RMSE is the square root of MSE and provides the error in the same units as the dependent variable. It is easier to interpret compared to MSE:
 
-\[ \text{RMSE} = \sqrt{\text{MSE}} \]
+$\ \text{RMSE} = \sqrt{\text{MSE}} \$
 
 **Example**:
 If the RMSE is 5, it means the average error between the predicted and actual values is 5 units of the dependent variable.
@@ -58,7 +58,7 @@ If the RMSE is 5, it means the average error between the predicted and actual va
 
 MAE measures the average magnitude of the errors in a set of predictions, without considering their direction. It is the average over the test sample of the absolute differences between prediction and actual observation:
 
-\[ \text{MAE} = \frac{1}{n} \sum_{i=1}^n |Y_i - \hat{Y_i}| \]
+$\ \text{MAE} = \frac{1}{n} \sum_{i=1}^n |Y_i - \hat{Y_i}| \$
 
 **Example**:
 If the MAE is 3, it means the average absolute difference between the predicted and actual values is 3 units of the dependent variable.
