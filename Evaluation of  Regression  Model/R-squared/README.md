@@ -31,7 +31,7 @@ Where:
 2. **Compute the Total Sum of Squares $(\( SS_{\text{tot}} \))$**:
    - $\ SS_{\text{tot}} = \sum (Y_i - \bar{Y})^2 \$
 
-3. **Compute the Residual Sum of Squares (\( SS_{\text{res}} \))**:
+3. **Compute the Residual Sum of Squares (\( SS_{\text{res}} \))$**:
    - $\ SS_{\text{res}} = \sum (Y_i - \hat{Y_i})^2 \$
 
 4. **Calculate R-squared**:
