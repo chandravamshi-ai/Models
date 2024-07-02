@@ -7,8 +7,8 @@ In multi-class classification, the goal is to classify data points into one of s
 1. **One-vs-Rest (OvR) / One-vs-All (OvA):**
    - **Approach:** Train one SVM classifier per class, where each classifier distinguishes one class from the rest.
    - **Process:**
-     1. For a dataset with \( K \) classes, \( K \) binary classifiers are trained.
-     2. Each classifier \( i \) is trained to separate class \( i \) from all other classes.
+     1. For a dataset with $\( K \)$ classes, $\( K \)$ binary classifiers are trained.
+     2. Each classifier $\( i \)$ is trained to separate class $\( i \)$ from all other classes.
      3. During prediction, each classifier outputs a score, and the class with the highest score is selected.
    - **Example:**
      - For classes {A, B, C}, three classifiers are trained:
@@ -20,8 +20,8 @@ In multi-class classification, the goal is to classify data points into one of s
 2. **One-vs-One (OvO):**
    - **Approach:** Train one SVM classifier for every pair of classes.
    - **Process:**
-     1. For a dataset with \( K \) classes, \( \frac{K(K-1)}{2} \) binary classifiers are trained.
-     2. Each classifier \( (i, j) \) is trained to separate class \( i \) from class \( j \).
+     1. For a dataset with $\( K \)$ classes, $\( \frac{K(K-1)}{2} \)$ binary classifiers are trained.
+     2. Each classifier $\( (i, j) \)$ is trained to separate class $\( i \)$ from class $\( j \)$.
      3. During prediction, each classifier votes for one of the two classes, and the class with the most votes is selected.
    - **Example:**
      - For classes {A, B, C}, three classifiers are trained:
@@ -32,8 +32,8 @@ In multi-class classification, the goal is to classify data points into one of s
 
 #### Linear Decision Boundaries in Multi-Class Classification
 
-- **One-vs-Rest:** Each SVM learns a hyperplane that separates one class from all others, resulting in \( K \) hyperplanes.
-- **One-vs-One:** Each SVM learns a hyperplane that separates a pair of classes, resulting in \( \frac{K(K-1)}{2} \) hyperplanes.
+- **One-vs-Rest:** Each SVM learns a hyperplane that separates one class from all others, resulting in $\( K \)$ hyperplanes.
+- **One-vs-One:** Each SVM learns a hyperplane that separates a pair of classes, resulting in $\( \frac{K(K-1)}{2} \)$ hyperplanes.
 
 #### Advantages and Disadvantages
 
