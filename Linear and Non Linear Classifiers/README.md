@@ -9,18 +9,18 @@ A linear classifier makes its classifications based on a linear decision boundar
 
 **Key Characteristics:**
 - **Decision Boundary:** The boundary separating classes is a straight line or a hyperplane.
-- **Equation Form:** The decision boundary can be expressed as a linear equation: \( w \cdot x + b = 0 \), where \( w \) is a weight vector, \( x \) is the input vector, and \( b \) is a bias term.
+- **Equation Form:** The decision boundary can be expressed as a linear equation: $\( w \cdot x + b = 0 \)$, where $\( w \)$ is a weight vector, $\( x \)$ is the input vector, and $\( b \)$ is a bias term.
 
 **Examples:**
 1. **Logistic Regression:**
    - **Purpose:** Used for binary classification.
    - **Decision Boundary:** A straight line in 2D or a hyperplane in higher dimensions.
-   - **Equation:** \( P(y=1|x) = \frac{1}{1 + e^{-(w \cdot x + b)}} \)
+   - **Equation:** $\( P(y=1|x) = \frac{1}{1 + e^{-(w \cdot x + b)}} \)$
    
 2. **Linear Support Vector Machine (SVM):**
    - **Purpose:** Used for binary or multi-class classification.
    - **Decision Boundary:** A hyperplane that maximizes the margin between classes.
-   - **Equation:** \( w \cdot x + b = 0 \)
+   - **Equation:** $\( w \cdot x + b = 0 \)$
 
 **Advantages:**
 - Simplicity and ease of implementation.
@@ -44,7 +44,7 @@ A non-linear classifier uses a non-linear decision boundary to separate differen
 1. **Kernel SVM:**
    - **Purpose:** Used for binary or multi-class classification.
    - **Decision Boundary:** A non-linear surface obtained using kernel functions (e.g., radial basis function (RBF) kernel).
-   - **Equation:** \( \sum \alpha_i K(x_i, x) + b = 0 \), where \( K \) is the kernel function.
+   - **Equation:** $\( \sum \alpha_i K(x_i, x) + b = 0 \)$, where $\( K \)$ is the kernel function.
 
 2. **Decision Trees:**
    - **Purpose:** Used for classification and regression.
@@ -54,7 +54,7 @@ A non-linear classifier uses a non-linear decision boundary to separate differen
 3. **Neural Networks:**
    - **Purpose:** Used for a wide range of tasks including classification.
    - **Decision Boundary:** Complex surfaces learned through multiple layers of non-linear transformations.
-   - **Equation:** Multiple layers of the form \( y = f(W \cdot x + b) \), where \( f \) is a non-linear activation function.
+   - **Equation:** Multiple layers of the form $\( y = f(W \cdot x + b) \)$, where $\( f \)$ is a non-linear activation function.
 
 **Advantages:**
 - Ability to capture complex relationships in data.
