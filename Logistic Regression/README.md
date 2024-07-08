@@ -314,3 +314,49 @@ In this example:
 ## Conclusion
 
 Logistic Regression is a **classification** algorithm used to predict a binary outcome. It leverages regression techniques to predict probabilities, which are then used for classification. The name can be confusing, but the primary purpose of logistic regression is to classify data into one of two categories based on input features.
+
+
+---
+
+The formula , 
+
+$$\[ \sigma(\beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots + \beta_n X_n) \]$$
+
+is indeed based on a linear combination of the input features, similar to linear regression. However, the key difference lies in the application of the **sigmoid function** (denoted by \(\sigma\)), which transforms the linear combination into a probability value between 0 and 1. This transformation is what makes logistic regression suitable for classification tasks.
+
+Let's break down the formula to understand how it works for classification:
+
+## Logistic Regression Formula
+
+### Linear Component
+
+The linear component is:
+
+$$\[ z = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots + \beta_n X_n \]$$
+
+This part is indeed a linear regression model, where:
+- $\( \beta_0 \)$ is the intercept.
+- $\( \beta_1, \beta_2, \ldots, \beta_n \)$ are the coefficients for the predictor variables $\( X_1, X_2, \ldots, X_n \)$.
+
+### Sigmoid Function
+
+The sigmoid function $\( \sigma(z) \)$ is defined as:
+
+$$\[ \sigma(z) = \frac{1}{1 + e^{-z}} \]$$
+
+The sigmoid function takes any real-valued number and maps it to a value between 0 and 1. This value can be interpreted as a probability.
+
+### Complete Formula
+
+Combining the linear component with the sigmoid function gives us the logistic regression model:
+
+$$\[ P(Y=1|X) = \sigma(\beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots + \beta_n X_n) \]$$
+
+### Interpretation
+
+- **\( P(Y=1|X) \)**: The probability that the outcome $\( Y \)$ is 1 (e.g., the event occurs) given the predictors $\( X \)$.
+- **Decision Rule**: To classify an observation, a threshold (usually 0.5) is applied to the predicted probability. If $\( P(Y=1|X) \geq 0.5 \)$, the observation is classified as 1; otherwise, it is classified as 0.
+
+## Conclusion
+
+Logistic regression uses a linear combination of input features, similar to linear regression, but it applies the sigmoid function to this linear combination to produce a probability. This probability is then used for binary classification, making logistic regression a classification algorithm despite its reliance on a linear regression foundation.
