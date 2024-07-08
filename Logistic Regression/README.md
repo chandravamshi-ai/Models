@@ -237,9 +237,7 @@ Logistic Regression comes with several assumptions:
 1. **Assumptions**: Requires several assumptions to be met.
 2. **Linear Decision Boundary**: Can only model linear relationships.
 3. **Sensitive to Outliers**: Outliers can significantly impact the model.
-4.
-
- **Limited to Binary Outcomes**: Cannot be used for multi-class classification without extensions.
+4. **Limited to Binary Outcomes**: Cannot be used for multi-class classification without extensions.
 
 ## Use Cases
 
